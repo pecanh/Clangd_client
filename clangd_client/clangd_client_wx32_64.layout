@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="All" />
+	<File name="src\LSPclient\client.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="42929" topLine="986" />
+		</Cursor>
+	</File>
+	<File name="src\LSPclient\client.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="34804" topLine="634" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\doxygen_parser.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="42976" topLine="1193" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\classbrowserbuilderthread.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="12767" topLine="280" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\classbrowser.cpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="31573" topLine="805" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\parser\parser_base.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14237" topLine="340" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\classbrowserbuilderthread.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="13953" topLine="293" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\parser\cclogger.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5811" topLine="314" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\codecompletion.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="77942" topLine="1688" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\parser\cclogger.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10783" topLine="244" />
+		</Cursor>
+	</File>
+	<File name="src\codecompletion\parser\parser.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="57092" topLine="1243" />
+		</Cursor>
+	</File>
+	<File name="src\Version.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="855" topLine="9" />
+		</Cursor>
+	</File>
+	<EditorTabsLayout layout="2a18564068373d250000288000000002=0;Clangd_Client wx3.2.x (64 bit):src\LSPclient\client.cpp,1;Clangd_Client wx3.2.x (64 bit):src\codecompletion\classbrowserbuilderthread.h,2;Clangd_Client wx3.2.x (64 bit):src\LSPclient\client.h,3;Clangd_Client wx3.2.x (64 bit):src\codecompletion\parser\cclogger.h,4;Clangd_Client wx3.2.x (64 bit):src\codecompletion\parser\cclogger.cpp,*5;Clangd_Client wx3.2.x (64 bit):src\codecompletion\classbrowser.cpp,6;Clangd_Client wx3.2.x (64 bit):src\codecompletion\parser\parser.cpp,7;Clangd_Client wx3.2.x (64 bit):src\codecompletion\doxygen_parser.cpp,8;Clangd_Client wx3.2.x (64 bit):src\codecompletion\classbrowserbuilderthread.cpp,9;Clangd_Client wx3.2.x (64 bit):src\codecompletion\codecompletion.cpp,10;Clangd_Client wx3.2.x (64 bit):src\codecompletion\parser\parser_base.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=536;besth=336;minw=536;minh=336;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=2a18564068373d250000288000000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=0;besth=0;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=13|" />
+</CodeBlocks_layout_file>
