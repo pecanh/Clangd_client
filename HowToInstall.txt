@@ -1,12 +1,9 @@
 // ---------------------------------------------
 How to Rebuild CodeBlocks and Clangd_client
 // ---------------------------------------------
-With your internet browser browse to www.codeblocks.org/downloads/source
-download codeblocks.25.03.tar.xz
 mkdir cbDevel
 cd cbDevel
-tar -xvf codeblocks_25.03.tar.xz
-mv codeblocks_25.03 trunk
+svn checkout https://svn.code.sf.net/p/codeblocks/code/trunk
 cd trunk/src
 
 // ---------------------------------------------
@@ -15,66 +12,59 @@ cd trunk/src
 
 run "codeblocks ~/cbDevel/trunk/src/CodeBlocks_wx32-unix.cbp"
 If it asks to seclect target, select "src" as the target (might ask twice)
-Right click project named "Code::Blocks wx3.2.x - Unix" and select Rebuild
+
+Right click the project named "Code::Blocks wx3.2.x - Unix" and select Rebuild
 reply "Yes" to the "Do you want to rebuild" message box
 Wait for completion of the compile
-Close the workspace after the compile (for me it was a 30 second compile)
+Close the workspace after the compile (Right click "Workspace" in the Project tab and select "close workspace)
 
 // ---------------------------------------------
 // Compiling the contrib plugins
 // ---------------------------------------------
 From main menu, select File/open and select the trunk/src/ContribPlugins_wx32-unix.workspace file.
-Right click on BrowseTracker wx3.2.x (Unix) and selelecct Rebuild then Yes
+Be careful that it has "unix" in the filename.
+
+Right click on BrowseTracker wx3.2.x (Unix) and selelect Rebuild then Yes
 Do the same for:
 	DragScroll wx3.2.x (Unix)
 	C::B KeyBinder wx3.2.x (Unix)
 	Clangd_client wx3.2.x (Unix)
-	SmartIndent wx3.2.x (Unix)
-Close CodeBlocks You should still be in the "src" folder, if not cd trunk/src
+	SmartIndent wx3.2.x (Unix) (Select any target if it asks)
+
+Close CodeBlocks.cd  You should still be in the "src" folder, if not cd trunk/src
 run ./update32
 cd output32
-run ./run.sh -d
-codeBlocks should run as Release 25.03. It might say "rev 0" (because we downloaded as a tar.xz file).
+run "./run.sh -d & "
+codeBlocks should run as "svn build rev 13667 (2025-05-21 14:32:21) gcc 15.1.1 Linux/unicode - 64 bit"
 
 //----------------------------------------------------------------
 // Now we'll update cland_client by overlaying it with the forum .zip file
 //----------------------------------------------------------------
-close this newly compiled development version of CodeBlocks (if it's runing)
-
+close this development version of CodeBlocks
 cd ~/cbDevel/trunk/src/plugins/contrib/
-rm -rf clangd_client.bak # if doing this the second time
-cp -a clangd_client/ clangd_client.bak/ #backup the bad clangd_client
+rm -rf clangd_client.bak # just to make sure
+mv clangd_client/ clangd_client.bak/ #move the old clangd_client
+Issue "dir -d cl*" # to make sure the folder are there
 
-cd ~/cbDevel
-# copy the file attached to the forum message to a temp folder and unzip it.
-mkdir temp
-cd temp
-# copy the forum message zip file to the temp folder
-# unzip the zip file which contains a folder named clangd_client
-unzip clangd_client_250528_114554.zip 
+Using your browser navigate to "https://github.com/pecanh/Clangd_client/tree/main"
+Click on "code" then "Download zip"
+Move the Clangd_client-main.zip file to the cbDevel folder
+run "unzip Clangd_client-main.zip to get the Clangd_client-main folder containing the new source.
+rm -rf trunk/src/plugins/contrib/clangd_client/*
+mv Clangd_client-main/clangd_client/ trunk/src/plugins/contrib/clangd_client
 
-cd clangd_client #cd into the folder from the zip file
-# clobber the old clangd_client source with the new
-rm -rf ~/cbDevel/trunk/src/plugins/contrib/clangd_client/src/
-cp -rv ./src/ ~/cbDevel/trunk/src/plugins/contrib/clangd_client/src/
 cd ~/cbDevel/trunk/src/output32
 # Run the newly compiled version of CodeBlocks
-./run.sh -d # the -d is to show us the debugging output
-
-// ----------------------------------------------------------------------------
+./run.sh -d
 # Recompile the new clangd_client contrib
-// ----------------------------------------------------------------------------
 # Under "Recent projects"  select ContribPlugins_wx32-unix_workspace 
-# If the Selectarget dialog for SmartIndet pops up , just close it.
+# If the "Selec target" dialog for pops up , just close it.
 Right click on Clangd_client wx3.2x(unix) and Rebuild it.
 After rebuilding,  close CodeBlocks.
-cd .. 	#(back to src folder)
-run ./update32 #update CB and contrib plugins
-cd output32 and run "./run.sh -d"
+cd .. 	#(back to cbDevel/trunk/src folder)
+run "./update32" #update CB and contrib plugins
 
-// ----------------------------------------------------------------------------
-Does clangd_client work now?
-// ----------------------------------------------------------------------------
+From main menu select navigate to Plugins,Manage plugins,
+Clangd_client should now have a version of 1.2.141 25/05/27
 
 
-	
